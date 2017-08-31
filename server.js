@@ -1,3 +1,13 @@
+//var server = require("./server");
+var router = require("./router");
+var requestHandlers = require("./requestHandlers");
+
+var handle = {}
+handle['/'] = requestHandlers.iniciar;
+handle['/iniciar'] = requestHandlers.iniciar;
+handle['/subir'] = requestHandlers.subir;
+
+
 var http = require("http");
 var url = require("url");
 
@@ -27,4 +37,5 @@ function iniciar(route, handle) {
 	console.log("Servidor Iniciado");
 	}
 
-exports.iniciar = iniciar;
+iniciar(router.route, handle);
+
