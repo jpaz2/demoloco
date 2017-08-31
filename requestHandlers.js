@@ -31,9 +31,9 @@ function subir(response, dataPosteada) {
 	
 	response.writeHead(200, {"Content-Type": "text/html"});
 	
-	response.write("Tu enviaste el texto: : " +
-	
-	querystring.parse(dataPosteada)["text"]);
+	response.write(" Eli te AMO, mi vida!! ");
+
+		       //Tu enviaste el texto: : " +querystring.parse(dataPosteada)["text"]);
 	
 	response.end();
 }
